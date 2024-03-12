@@ -11,6 +11,11 @@ class Idea extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'description',
+        'user_id',
+    ];
 
     public function user():BelongsTo{
         return $this->belongsTo(User::class);
